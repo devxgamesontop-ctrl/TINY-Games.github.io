@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TINY Games | Adventure Awaits</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar">
+        <div class="logo">TINY Games</div>
+        <div class="nav-links">
+          <a href="#games">Games</a>
+          <a href="#stats">Stats</a>
+          <a href="#database">Pet Database</a>
+          <a href="#blogs">Updates</a>
+        </div>
+        <button class="cta">Play Now</button>
+      </nav>
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Welcome to the TINY Universe</p>
+          <h1>Massive adventures. Tiny worlds. Endless rewards.</h1>
+          <p>
+            Explore vibrant experiences inspired by the most beloved creature-collecting games.
+            Discover new events, track live stats, and dive into our pet value database.
+          </p>
+          <div class="hero-actions">
+            <button class="cta">Launch Launcher</button>
+            <button class="ghost">Join the Community</button>
+          </div>
+          <div class="hero-metrics">
+            <div>
+              <span class="metric-label">Active Players</span>
+              <span class="metric-value" id="heroPlayers">0</span>
+            </div>
+            <div>
+              <span class="metric-label">Total Pets</span>
+              <span class="metric-value" id="heroPets">0</span>
+            </div>
+            <div>
+              <span class="metric-label">Live Events</span>
+              <span class="metric-value" id="heroEvents">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h3>Featured Drop</h3>
+          <p>Shadow Eclipse Egg</p>
+          <div class="drop-timer" id="dropTimer">00:00:00</div>
+          <p class="drop-note">Next global drop in all realms.</p>
+          <button class="ghost">Set Reminder</button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="games" class="section">
+        <div class="section-heading">
+          <h2>Our Games</h2>
+          <p>Pick your universe and jump straight into action.</p>
+        </div>
+        <div class="grid" id="gamesGrid"></div>
+      </section>
+
+      <section id="stats" class="section stats">
+        <div class="section-heading">
+          <h2>Live Stats</h2>
+          <p>Real-time pulse of the TINY Games ecosystem.</p>
+        </div>
+        <div class="stats-grid" id="statsGrid"></div>
+      </section>
+
+      <section id="database" class="section database">
+        <div class="section-heading">
+          <h2>Pet Values Database</h2>
+          <p>Track rarity, value, and demand before you trade.</p>
+        </div>
+        <div class="table-controls">
+          <input type="text" id="searchInput" placeholder="Search pet name..." />
+          <select id="rarityFilter">
+            <option value="all">All Rarities</option>
+            <option value="Mythic">Mythic</option>
+            <option value="Legendary">Legendary</option>
+            <option value="Epic">Epic</option>
+            <option value="Rare">Rare</option>
+          </select>
+        </div>
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Pet</th>
+                <th>Rarity</th>
+                <th>Value</th>
+                <th>Demand</th>
+                <th>Trend</th>
+              </tr>
+            </thead>
+            <tbody id="petTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="blogs" class="section">
+        <div class="section-heading">
+          <h2>Update Blogs</h2>
+          <p>Fresh patch notes, previews, and developer insights.</p>
+        </div>
+        <div class="blog-grid" id="blogGrid"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <h3>TINY Games Studio</h3>
+        <p>Crafting bold, playful worlds for collectors everywhere.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Support</a>
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
